@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parking Slots</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="mallName"></h1>
+        <div id="slots" class="slots-grid"></div>
+    </div>
+
+    <div id="bookingForm" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeForm()">&times;</span>
+            <h2>Book Slot <span id="selectedSlot"></span></h2>
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="text" id="vehicle" placeholder="Vehicle Number">
+            <button onclick="confirmBooking()">Confirm Booking</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

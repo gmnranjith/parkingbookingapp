@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Mall - Parking App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Select Mall</h1>
+        <select id="mallSelect">
+            <option value="">-- Choose a Mall --</option>
+            <option value="Phoenix">Phoenix Mall</option>
+            <option value="Express">Express Avenue</option>
+            <option value="VR">VR Mall</option>
+        </select>
+        <button onclick="goToParking()">Proceed</button>
+    </div>
+    <script>
+        function goToParking() {
+            const mall = document.getElementById("mallSelect").value;
+            if (mall) {
+                localStorage.setItem("selectedMall", mall);
+                window.location.href = "parking.html";
+            } else {
+                alert("Please select a mall.");
+            }
+        }
+    </script>
+</body>
+</html>
